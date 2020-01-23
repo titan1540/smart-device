@@ -1,13 +1,174 @@
-<!DOCTYPE html>
+wrapper<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
+  <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="page-header">
+    <nav class="header-nav">
+      <div class="container">
+        <div class="header-nav-wrapper">
+          <a class="header-logo">
+            <img src="img/header-logo.png" alt="">
+          </a>
+          <ul class="header-contacts">
+            <li class="header-contacts-item"><a href="#">info@sd.ru</a></li>
+            <li class="header-contacts-item"><a href="#">+7 (495) 000 52 52</a></li>
+          </ul>
+          <a href="#" class="btn btn-call">Заказать звонок</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Smart Device</h1>
+    <section class="promo">
+      <div class="container">
+        <div class="promo-wrapper">
+          <div class="promo-text-column">
+            <h2 class="promo-title">Печатные платы</h2>
+            <p class="promo-text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+            <a href="#" class="btn btn-promo">Получить бесплатную консультацию</a>
+          </div>
+          <div class="promo-img-column">
+            <img src="img/boards.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages">
+      <div class="container">
+        <h2 class="visually-hidden">Преимущество</h2>
+        <ul class="advantages-list">
+          <li class="advantages-item">
+            <h3 class="advantages-item-title">Оперативные сроки</h3>
+            <p class="advantages-item-text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-item-title">Крупные поставщики</h3>
+            <p class="advantages-item-text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-item-title">Полная конфиденциальность</h3>
+            <p class="advantages-item-text">По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-item-title">Персонализация стоимости</h3>
+            <p class="advantages-item-text">Мы  подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <div class="container">
+        <div class="about-us-wrapper">
+          <div class="about-us-img-column">
+            <img src="img/2005.png" alt="">
+          </div>
+          <div class="about-us-text-column">
+            <h2 class="about-us-title">О компании</h2>
+            <div class="about-us-text">
+              <ul class="about-us-description">
+                <li>
+                  <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+                </li>
+                <li>
+                  <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-about-us">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback">
+      <div class="container">
+        <div class="feedback-wrapper">
+          <div class="feedback-img-column">
+            <img src="img/paper-airplane.png" alt="">
+          </div>
+          <div class="feedback-form-column">
+            <h2 class="feedback-title">Остались вопросы? Задайте их нам!</h2>
+            <p class="feedback-tip">Мы проконсультируем Вас бесплатно</p>
+            <form class="feedback-form" action="/mailto" method="post">
+              <div class="feedback-form-group">
+                <input type="text" name="name" placeholder="Имя" class="feedback-form-group-left-part">
+                <input type="tel" name="number" placeholder="Телефон" class="feedback-form-group-right-part">
+              </div>
+              <textarea name="message" id="message" placeholder="Ваш вопрос"></textarea>
+              <div class="feedback-form-group">
+                <input type="submit" class="btn btn-sumbit feedback-form-group-left-part" value="Задать вопрос">
+                <div class="checkbox-area feedback-form-group-right-part">
+                  <label>
+                    <input type="checkbox" name="subscription">
+                    Я согласен получать спам и смс на телефон
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <h2 class="visually-hidden">Футер</h2>
+      <div class="footer-wrapper">
+        <section class="footer-left">
+          <div class="footer-logo">
+            <img src="img/footer-logo.png" alt="">
+            <ul class="social">
+              <li><a href="#" class="social-btn social-btn-fb"></a>Фейсбук</li>
+              <li><a href="#" class="social-btn social-btn-ok"></a>Одноклассники</li>
+              <li><a href="#" class="social-btn social-btn-vk"></a>Вконтакте</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="footer-center">
+          <h3 class="footer-title">Разделы сайта</h3>
+          <ul class="map">
+            <li class="map-item">О компании</li>
+            <li class="map-item">Комплектующие</li>
+            <li class="map-item">Продукты</li>
+            <li class="map-item">Доставка</li>
+            <li class="map-item">Производство печатных плат</li>
+            <li class="map-item">Контакты</li>
+            <li class="map-item">Монтаж печатных плат</li>
+          </ul>
+        </section>
+
+        <section class="footer-right">
+          <h3 class="footer-title">Наш офис</h3>
+          <ul class="footer-contacts">
+            <li class="footer-contacts-item">г. Мытищи, Олимпийский проспект, д.10</li>
+            <li class="footer-contacts-item">+7 (495) 589-40-50</li>
+            <li class="footer-contacts-item">+7 (925) 003-87-67</li>
+            <li class="footer-contacts-item">+7 (926) 926-080-79</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="credits">
+        <div class="credits-wrapper">
+          <ul class="credits-list">
+            <li class="credits-item">Все права защищены</li>
+            <li class="credits-item">1999-2018 SD Service Devices</li>
+            <li class="credits-item">Условия конфиденциальности</li>
+            <li class="credits-item">Developed by wow studio </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </footer>
 </body>
 </html>
