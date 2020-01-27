@@ -16,6 +16,13 @@
     font-weight: bold
     font-style: normal
 
+$main-blue: #00b2ff
+$main-black: #1B2d37
+
+=size($width, $height: $width)
+  width: $width
+  height: $height
+
 body
   margin: 0
   padding: 0
@@ -61,10 +68,11 @@ ul
   display: flex
   align-items: center
 
-.header-logo,
-.header-logo img
-  width: 202px
-  height: 52px
+.header-logo
+  +size(202px, 52px)
+
+  img
+    +size(202px, 52px)
 
 .header-contacts
   margin-left: auto
@@ -74,32 +82,30 @@ ul
   flex-wrap: wrap
   width: 441px
 
-.header-contacts-item
-  margin-right: 88px
-  padding-left: 40px
-  line-height: 18px
-  position: relative
+  &-item
+    margin-right: 88px
+    padding-left: 40px
+    line-height: 18px
+    position: relative
 
-.header-contacts-item::before
-  content: ""
-  position: absolute
-  left: 0
-  top: 50%
-  transform: translateY(-50%)
-  background-repeat: no-repeat
+    &::before
+      content: ""
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      background-repeat: no-repeat
+
+    &:last-child
+      margin-right: 0
 
 .contact-email::before
   background-image: url('../img/envelope.svg')
-  width: 19px
-  height: 14px
+  +size(19px, 14px)
 
 .contact-phone::before
   background-image: url('../img/phone-call.svg')
-  width: 18px
-  height: 18px
-
-.header-contacts-item:last-child
-  margin-right: 0
+  +size(18px)
 
 .btn
   display: inline-block
@@ -145,29 +151,138 @@ ul
   padding-left: 96px
   position: relative
 
-.promo-text::before
-  content: ''
-  height: 2px
-  width: 66px
-  margin-right: 30px
-  background-color: #ffffff
-  position: absolute
-  left: 0
-  top: 17px
+  &::before
+    content: ''
+    +size(66px, 2px)
+    margin-right: 30px
+    background-color: #ffffff
+    position: absolute
+    left: 0
+    top: 17px
 
 .btn-promo
   width: 407px
-  background-color: #00b2ff
+  background-color: $main-blue
   color: #ffffff
-  border-color: #00b2ff
+  border-color: $main-blue
   font-size: 16px
   line-height: 19px
 
 .promo-img-column
-  width: 705px
-  height: 515px
+  +size(705px, 515px)
   margin-top: 185px
 
-.promo-img-column
-  width: 705px
-  height: 515px
+  img
+    +size(705px, 515px)
+
+
+
+.feedback
+  background-color: $main-blue
+
+
+.page-footer
+  color: $main-black
+
+.footer-wrapper
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  padding-top: 65px
+
+.footer-left
+  margin-right: 210px
+
+.footer-logo
+  +size(216px, 52px)
+
+  img
+    +size(216px, 52px)
+
+.social
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-wrap: wrap
+  width: 216px
+  margin-top: 55px
+
+  &-item
+    margin-right: 16px
+
+    &:last-child
+      margin-right: 0
+
+.social-btn
+  display: block
+  +size(28px)
+  vertical-align: middle
+  background-image: url('../img/social.png')
+  background-repeat: no-repeat
+  font-size: 0
+
+  &-fb
+    background-position: 0 0
+
+  &-ok
+    background-position: -42px 0
+
+  &-vk
+    background-position: -84px 0
+
+.footer-center
+  margin-right: 230px
+
+.footer-title
+  margin-bottom: 30px
+  font-family: 'Roboto Condensed'
+  font-size: 15px
+  line-height: 16px
+  letter-spacing: 0.05em
+  text-transform: uppercase
+
+.map
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-wrap: wrap
+  width: 520px
+
+  &-item
+    min-width: 200px
+    margin-right: auto
+    margin-bottom: 8px
+    opacity: 0.5
+
+    &:nth-child(2n)
+      margin-right: 0
+
+.footer-contacts-item
+  margin-bottom: 8px
+  opacity: 0.5
+
+.credits
+  margin-top: 55px
+  border-top: 1px solid rgba(98, 105, 98, 0.2)
+
+.credits-list
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+
+.credits-item
+  opacity: 0.5
+  font-size: 13px
+  line-height: 24px
+  letter-spacing: 0.04em
+  text-transform: uppercase
+
+  &:nth-child(1)
+    margin-right: 60px
+
+  &:nth-child(2)
+    margin-right: 145px
+
+  &:nth-child(3)
+    margin-right: 405px
