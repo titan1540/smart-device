@@ -119,17 +119,15 @@
             <p class="feedback-tip">Мы проконсультируем Вас бесплатно</p>
             <form class="feedback-form" action="/mailto" method="post">
               <div class="feedback-form-group">
-                <input type="text" name="name" placeholder="Имя" class="feedback-form-group-left-part">
-                <input type="tel" name="number" placeholder="Телефон" class="feedback-form-group-right-part">
+                <input type="text" name="name" id="feedback-name" placeholder="Имя" class="feedback-form-group-left-part">
+                <input type="tel" name="number" id="feedback-tel" placeholder="Телефон" class="feedback-form-group-right-part">
               </div>
-              <textarea name="message" id="message" placeholder="Ваш вопрос"></textarea>
+              <textarea name="message" id="feedback-message" placeholder="Ваш вопрос"></textarea>
               <div class="feedback-form-group">
                 <input type="submit" class="btn btn-sumbit feedback-form-group-left-part" value="Задать вопрос">
                 <div class="checkbox-area feedback-form-group-right-part">
-                  <label>
-                    <input type="checkbox" name="subscription">
-                    Я согласен получать спам и смс на телефон
-                  </label>
+                  <input type="checkbox" name="subscription" id="feedback-checkbox">
+                  <label for="feedback-checkbox">Я согласен на обработку  персональных данных</label>
                 </div>
               </div>
             </form>
